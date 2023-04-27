@@ -83,3 +83,37 @@ height = 1.75
 isSwimming = True
 
 print(f'your score is {score}, your height is {height} and you can swim {isSwimming}')
+
+# Challenge : How long your life is?
+age = input("What is your current age? ")
+days_lived = int(age) * 365
+weeks_lived = int(age) * 52
+months_lived = int(age) * 12
+print(f'you have lived {days_lived} days, {weeks_lived} weeks and {months_lived} months')
+
+days_left = (90 * 365) - days_lived
+weeks_left = (90 * 52) - weeks_lived
+months_left = (90 * 12) - months_lived
+
+print(f"You have {days_left} days, {weeks_left} weeks, and {months_left} months left")
+#  OR
+age_int = int(age)
+years_left = 90 - age_int
+days_left = years_left * 365
+weeks_left = years_left * 52
+months_left = years_left * 12
+print(f"You have {days_left} days, {weeks_left} weeks, and {months_left} months left")
+
+
+# Challenge: TIP calculator: {:.2f} to add zero as decimal
+print("Welcome to the tip calculator!")
+bill = float(input("What was the total bill? $"))
+tip = int(input("What percentage tip would you like to give? 10, 12 or 15?"))
+nr_pers = int(input("How many people to split the bill?"))
+total_tip = ((tip /100) * bill)
+total_bill = total_tip + bill
+price_pers = round(total_bill / nr_pers, 2)
+# no zero as decimal
+price_pers = "{:.2f}".format(total_bill / nr_pers)
+# zero as decimal
+print(input(f"Each person should pay: $ {price_pers}"))
