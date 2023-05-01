@@ -135,3 +135,59 @@ if size == 'L':
         bill += 1
 
 print(f'Your final bill is: ${bill}')
+
+# Challenge: Love calculator
+print("Welcome to the Love Calculator!")
+name1 = input("What is your name? \n")
+name2 = input("What is their name? \n")
+
+combined_name = name1 + name2
+# print(combined_name)
+combined_name_lower = combined_name.lower()
+# print(combined_name_lower)
+
+total_t = combined_name_lower.count("t")
+total_r = combined_name_lower.count("r")
+total_u = combined_name_lower.count("u")
+total_e = combined_name_lower.count("e")
+total_true = total_t + total_r + total_u + total_e
+# print(total_true)
+
+total_l = combined_name_lower.count("l")
+total_o = combined_name_lower.count("o")
+total_v = combined_name_lower.count("v")
+total_e = combined_name_lower.count("e")
+total_love = total_l + total_o + total_v + total_e
+# print(total_love)
+
+score = str(total_true) + str(total_love)
+# print(score)
+score_int = int(score)
+if score_int < 10 or score_int > 90:
+    print(f'Your score is {score_int}, you go together like coke and mentos.')
+elif score_int >= 40 and score_int <= 50:
+    print(f'Your score is {score_int}, you are alright together.')
+else:
+    print(f'Your score is {score_int}.')
+
+# Challenge: Tresure Island
+print("Welcome to Treasure Island.")
+print("Your mission is to find the treasure.") 
+
+direction = input('Which way do you wanna go? "left" of "right"?: \n').lower()
+if direction == 'left':
+  action = input('You got to choose between "wait" and "swim"! \n').lower()
+  if action == 'wait':
+    color = input('Which door? "red", "blue" or "yellow"?: \n').lower()
+    if color == 'red':
+      print('Fired!')
+    elif color == 'blue':
+      print ('Monsters')
+    elif color == 'yellow':
+      print('You win!')
+    else: 
+      print('Fail!')
+  else:
+    print('You drawned!')
+else:
+  print('Game over!')
