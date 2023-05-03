@@ -96,7 +96,9 @@ weeks_left = (90 * 52) - weeks_lived
 months_left = (90 * 12) - months_lived
 
 print(f"You have {days_left} days, {weeks_left} weeks, and {months_left} months left")
-#  OR
+
+# Challenge : How long you've got left?
+
 age_int = int(age)
 years_left = 90 - age_int
 days_left = years_left * 365
@@ -106,6 +108,7 @@ print(f"You have {days_left} days, {weeks_left} weeks, and {months_left} months 
 
 
 # Challenge: TIP calculator: {:.2f} to add zero as decimal
+
 print("Welcome to the tip calculator!")
 bill = float(input("What was the total bill? $"))
 tip = int(input("What percentage tip would you like to give? 10, 12 or 15?"))

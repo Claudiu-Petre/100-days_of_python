@@ -140,26 +140,22 @@ print(f'Your final bill is: ${bill}')
 print("Welcome to the Love Calculator!")
 name1 = input("What is your name? \n")
 name2 = input("What is their name? \n")
-
 combined_name = name1 + name2
 # print(combined_name)
 combined_name_lower = combined_name.lower()
 # print(combined_name_lower)
-
 total_t = combined_name_lower.count("t")
 total_r = combined_name_lower.count("r")
 total_u = combined_name_lower.count("u")
 total_e = combined_name_lower.count("e")
 total_true = total_t + total_r + total_u + total_e
 # print(total_true)
-
 total_l = combined_name_lower.count("l")
 total_o = combined_name_lower.count("o")
 total_v = combined_name_lower.count("v")
 total_e = combined_name_lower.count("e")
 total_love = total_l + total_o + total_v + total_e
 # print(total_love)
-
 score = str(total_true) + str(total_love)
 # print(score)
 score_int = int(score)
@@ -188,6 +184,6 @@ if direction == 'left':
     else: 
       print('Fail!')
   else:
-    print('You drawned!')
+    print('You drowned!')
 else:
   print('Game over!')
