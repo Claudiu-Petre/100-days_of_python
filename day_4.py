@@ -64,3 +64,39 @@ print(f'{payer} is going to buy the meal today')
 # OR using CHOICE()
 payer = random.choice(names)
 print(f'{payer} is going to buy the meal today')
+
+# Nested lists
+fruits = ["strawberries", "nectarines", "apples"]
+vegetables = ["spinach", "tomatoes", "celery", "carrots"]
+
+dirty_dozen = [fruits, vegetables]
+print(dirty_dozen)
+
+print(dirty_dozen[0]) // fruits
+print(dirty_dozen[1]) // vegetables
+
+print(dirty_dozen[1][2]) // celery
+print(dirty_dozen[1][3]) // carrots
+
+# Challenge: 
+# write a program that allows you to mark a square on the map using a two-digit system. 
+# The first digit in the input will specify the column (the position on the horizontal axis).
+# The second digit in the input will specify the row number (the position on the vertical axis). 
+
+row1 = ["⬜️","️⬜️","️⬜️"]
+row2 = ["⬜️","⬜️","️⬜️"]
+row3 = ["⬜️️","⬜️","⬜️️*️"]
+
+map = [row1, row2, row3]
+print(f"{row1}\n{row2}\n{row3}")
+position = input("Where do you want to put the treasure? ")
+
+horizontal = int(position[0])
+vertical = int(position[1])
+
+selected_row = map[vertical - 1] // to get the column no
+selected_row[horizontal - 1] = 'X' // to get the row x-ed
+#  or
+map[vertical - 1][horizontal - 1] = 'X'
+
+print(f"{row1}\n{row2}\n{row3}")
