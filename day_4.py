@@ -85,7 +85,7 @@ print(dirty_dozen[1][3]) // carrots
 
 row1 = ["⬜️","️⬜️","️⬜️"]
 row2 = ["⬜️","⬜️","️⬜️"]
-row3 = ["⬜️️","⬜️","⬜️️*️"]
+row3 = ["⬜️️","⬜️","⬜️️"]
 
 map = [row1, row2, row3]
 print(f"{row1}\n{row2}\n{row3}")
@@ -100,3 +100,137 @@ selected_row[horizontal - 1] = 'X' // to get the row x-ed
 map[vertical - 1][horizontal - 1] = 'X'
 
 print(f"{row1}\n{row2}\n{row3}")
+
+# Challenge: Rock, Paper, Scissors
+import random
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+game_images = [rock, paper, scissors]
+my_choice = int(input('What do you choose? Type 0 for "Rock", 1 for "Paper" or 2 for "Scissors". \n'))
+
+if my_choice >= 3 or my_choice < 0:
+  print('You chose an invalid number. You lose')
+else:
+    if my_choice == 0:
+      print('Rock')
+    elif my_choice == 1:
+      print('Paper')
+    else:
+      print('Scissors')
+    
+    print(game_images[my_choice])
+  
+    calc_choice = input('Computer choice: ')
+    calc_random = random.randint(0, 2)
+    if calc_random == 0:
+      print('Rock')
+    elif calc_random == 1:
+      print('Paper')
+    else:
+      print('Scissors')
+  
+    print(game_images[calc_random])
+  
+    
+    if my_choice == 0 and calc_random == 0:
+      print("It's a draw")
+    elif my_choice == 1 and calc_random == 0:
+      print('User wins')
+    elif my_choice == 2 and calc_random == 0:
+      print('Computer wins')
+    
+    if my_choice == 0 and calc_random == 1:
+      print("Computer wins")
+    elif my_choice == 1 and calc_random == 1:
+      print('It is a draw')
+    elif my_choice == 2 and calc_random == 1:
+      print('User wins')
+    
+    if my_choice == 0 and calc_random == 2:
+      print("User wins")
+    elif my_choice == 1 and calc_random == 2:
+      print('Computer wins')
+    elif my_choice == 2 and calc_random == 2:
+      print('It is a draw')
+#  OR
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+game_images = [rock, paper, scissors]
+
+user_choice = int(input("What do you choose? Type 0 for Rock, 1 for Paper or 2 for Scissors.\n"))
+print(game_images[user_choice])
+
+computer_choice = random.randint(0, 2)
+print("Computer chose:")
+print(game_images[computer_choice])
+
+if user_choice >= 3 or user_choice < 0: 
+  print("You typed an invalid number, you lose!") 
+elif user_choice == 0 and computer_choice == 2:
+  print("You win!")
+elif computer_choice == 0 and user_choice == 2:
+  print("You lose")
+elif computer_choice > user_choice:
+  print("You lose")
+elif user_choice > computer_choice:
+  print("You win!")
+elif computer_choice == user_choice:
+  print("It's a draw")
+
+####### Debugging challenge: #########
+#Try running this code and type 5.
+#It will give you an IndexError and point to line 32 as the issue.
+#But on line 38 we are trying to prevent a crash by detecting
+#any numbers great than or equal to 3 or less than 0.
+#So what's going on?
+#Can you debug the code and fix it?
+
