@@ -1,5 +1,6 @@
 # LOOPS
 
+  # FOR
 fruits = ["Apple", "Peach", "Pear"]
 for fruit in fruits:
   print(fruit)
@@ -39,3 +40,41 @@ for score in student_scores:
     if(score > res):
         res = score
 print(f'The highest score in the class is: {res}')
+
+  # FOR with RANGE (doesn't include the last digit)
+result = 0
+for number in range (1, 101):
+   result += number
+print(result)
+
+# change the pace by 2, etc:
+result = 0
+for number in range (1, 101, 2):
+   result += number
+print(result)
+
+# Challenge: You are going to write a program that calculates the sum of all the even numbers from 1 to 100. 
+# Thus, the first even number would be 2 and the last one is 100:
+total = 0
+for number in range (1, 101):
+    if number % 2 == 0:
+        total += number
+print (total)
+# OR
+total = 0
+for number in range (2, 101, 2):
+  total += number
+print (total)
+
+# Challenge: FizzBuzz
+for number in range (1, 101):
+    if number % 3 == 0 and number % 5 == 0:
+        print('FizzBuzz')
+    elif number % 3 == 0:
+        print('Fizz')
+    elif number % 5 == 0:
+        print('Buzz')
+    else:
+        print (number)
+
+# Challenge: Password Generator
