@@ -24,8 +24,10 @@ def jump():
 for step in range(6):
     jump()
 
+# Code Blocks - Indentation
+    # 4 spaces = 1 tab
+    # official recommendation: 4 spaces
 
-# Code Blocks
 # While loop 
 # Project: Karel the robot
 
