@@ -36,6 +36,15 @@ while nr_loops > 0:
 
 while at_goal() != True:
     jump()
+# or
+while not at_goal():
+    jump()
+# or
+while not at_goal():
+    if wall_in_front():
+        jump()
+    else:
+        move()
 
 # Project: Karel the robot
 
