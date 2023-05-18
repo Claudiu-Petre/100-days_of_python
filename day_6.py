@@ -29,6 +29,14 @@ for step in range(6):
     # official recommendation: 4 spaces
 
 # While loop 
+nr_loops = 6    
+while nr_loops > 0:
+    jump()
+    nr_loops -= 1
+
+while at_goal() != True:
+    jump()
+
 # Project: Karel the robot
 
 
