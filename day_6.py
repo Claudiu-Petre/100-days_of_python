@@ -39,14 +39,37 @@ while at_goal() != True:
 # or
 while not at_goal():
     jump()
-# or
+# or with extra conditions:
 while not at_goal():
     if wall_in_front():
         jump()
     else:
         move()
 
-# Project: Karel the robot
+# Project: Reeborg's World - the robot(Hurdle 4)
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def jump():
+    turn_left()
+    while wall_on_right():
+        move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    
+    while front_is_clear():
+        move()
+    turn_left()
+    
+while not at_goal():
+    if wall_in_front():
+        jump()
+    else:
+        move()
 
 
 
