@@ -14,7 +14,7 @@ print(chosen_word)
 
 #TODO - Ask the user to guess a letter and assign their answer to a variable called guess. Make guess lowercase.
 
-guess = input('Choose a letter: ').lower()
+# guess = input('Choose a letter: ').lower()
 
 #TODO - Check if the letter the user guessed (guess) is one of the letters in the chosen_word.
 for letter in chosen_word:
@@ -45,10 +45,24 @@ print(display)
 #TODO: - Loop through each position in the chosen_word;
 #If the letter at that position matches 'guess' then reveal that letter in the display at that position.
 #e.g. If the user guessed "p" and the chosen word was "apple", then display should be ["_", "p", "p", "_", "_"].
-for position in range(word_length):
-  letter = chosen_word[position]
-  if letter == guess:
-    display[position] = letter
+#TODO: - Use a while loop to let the user guess again. 
+# The loop should only stop once the user has guessed all the letters in the chosen_word 
+# and 'display' has no more blanks ("_"). 
+# Then you can tell the user they've won.
+end_game = False
+
+while not end_game:
+  guess = input('Choose a letter: ').lower()
+
+  for position in range(word_length):
+    letter = chosen_word[position]
+    if letter == guess:
+      display[position] = letter
+  print(display)
+
+  if '_' not in display:
+    end_game = True
+    print('You win!')
 
 
 #TODO: - Print 'display' and you should see the guessed letter in the correct position and every other letter replace with "_".
